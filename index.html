@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOS Plomberie Genève – Plombier d'Urgence 24/7 Rapide et Fiable</title>
+<meta name="description" content="SOS Plomberie à Genève – Votre plombier d'urgence disponible 24/7. Intervention rapide pour fuites, chauffe-eau, débouchage et canalisations bouchées. Devis gratuit.">
+<link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png" type="image/x-icon">
+<style>
+  :root{
+    --blue:#0057ff;
+    --blue-dark:#0042c4;
+    --ink:#0c1220;
+    --muted:#5b6577;
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --line:#e7ebf2;
+    --green:#16a34a;
+    --green-dark:#128a3e;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(16,28,60,.08);
+    --shadow-lg:0 24px 60px rgba(16,28,60,.14);
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.font-display{font-family:'Manrope','Inter',sans-serif;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#eef3ff;color:var(--blue);font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px}
+  .stars{color:#ffb400;letter-spacing:2px;font-size:1rem}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-family:'Manrope',sans-serif;border-radius:12px;padding:15px 24px;cursor:pointer;border:none;transition:.2s;font-size:1rem;white-space:nowrap}
+  .btn-call{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(22,163,74,.25)}
+  .btn-call:hover{background:var(--green-dark);transform:translateY(-2px)}
+  .btn-quote{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(0,87,255,.25)}
+  .btn-quote:hover{background:var(--blue-dark);transform:translateY(-2px)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+  .btn-block{width:100%}
+
+  /* Top utility bar */
+  .topbar{background:var(--ink);color:#fff;font-size:.85rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 20px}
+  .topbar a{font-weight:700}
+  .topbar .ico{color:#9fd0ff}
+  @media(max-width:640px){.topbar .hide-sm{display:none}}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 20px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Manrope';font-weight:800;font-size:1.15rem}
+  .brand .dot{color:var(--blue)}
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{font-weight:600;color:var(--muted);font-size:.95rem}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer}
+  @media(max-width:920px){
+    .nav-links{display:none}
+    .nav-cta .btn-quote{display:none}
+    .menu-btn{display:block}
+  }
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,#f5f8ff 0%,#fff 100%);padding:48px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(2rem,4.3vw,3.2rem)}
+  .hero h1 span{color:var(--blue)}
+  .hero .lead{color:var(--muted);font-size:1.12rem;margin:18px 0 22px;max-width:540px}
+  .checks{display:grid;gap:12px;margin:22px 0}
+  .check{display:flex;align-items:flex-start;gap:10px;font-weight:500}
+  .check .ic{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#e7f6ec;color:var(--green);display:grid;place-items:center;font-size:.8rem;font-weight:800;margin-top:2px}
+  .hero-rating{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:.95rem;color:var(--muted)}
+  .hero-rating b{color:var(--ink)}
+
+  /* Lead form card */
+  .lead-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:26px}
+  .lead-card .badge{display:inline-flex;align-items:center;gap:8px;background:#fff4e5;color:#c2410c;font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+  .lead-card h2{font-size:1.4rem}
+  .lead-card p.sub{color:var(--muted);font-size:.92rem;margin:4px 0 16px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:5px}
+  .field input,.field select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fbfcfe;transition:.2s}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(0,87,255,.12)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .form-foot{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
+  .form-done{display:none;text-align:center;padding:30px 10px}
+  .form-done .ic{width:54px;height:54px;border-radius:50%;background:#e7f6ec;color:var(--green);display:grid;place-items:center;font-size:1.5rem;margin:0 auto 12px}
+
+  /* Reassurance strip */
+  .reassure{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+  .reassure .item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .reassure h3{font-size:1.02rem;margin-bottom:6px}
+  .reassure p{color:var(--muted);font-size:.9rem}
+
+  /* Sections */
+  section.block{padding:64px 0}
+  .section-head{max-width:680px;margin:0 auto 38px;text-align:center}
+  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem)}
+  .section-head p{color:var(--muted);margin-top:12px}
+
+  /* About */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .about h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px}
+  .about p{color:var(--muted);margin-bottom:14px}
+  .about .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about-imgs img{border-radius:14px;width:100%;height:230px;object-fit:cover;box-shadow:var(--shadow)}
+  .about-imgs img:nth-child(1),.about-imgs img:nth-child(4){margin-top:0}
+  .about-imgs img:nth-child(2),.about-imgs img:nth-child(3){margin-top:24px}
+
+  /* Services */
+  .services{background:var(--bg)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .card .thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+  .card .thumb img{width:100%;height:100%;object-fit:cover}
+  .card .tag{position:absolute;top:12px;left:12px;background:#fff;color:#c2410c;font-weight:700;font-size:.75rem;padding:5px 10px;border-radius:999px;box-shadow:var(--shadow)}
+  .card .body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .card h3{font-size:1.15rem}
+  .card .sub{color:var(--blue);font-weight:700;font-size:.82rem}
+  .card p{color:var(--muted);font-size:.92rem;flex:1}
+  .card .cta{display:flex;gap:10px;margin-top:8px}
+  .card .cta a{flex:1;font-size:.9rem;padding:11px 12px}
+
+  /* Why / stats */
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .why .item{text-align:center;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  .why .num{font-family:'Manrope';font-weight:800;font-size:2rem;color:var(--blue)}
+  .why h3{font-size:1.05rem;margin:8px 0 4px}
+  .why p{color:var(--muted);font-size:.9rem}
+
+  /* Process */
+  .process{background:var(--ink);color:#fff}
+  .process .section-head h2{color:#fff}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}
+  .step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px}
+  .step .n{width:44px;height:44px;border-radius:12px;background:var(--blue);display:grid;place-items:center;font-family:'Manrope';font-weight:800;font-size:1.2rem;margin-bottom:16px}
+  .step h3{font-size:1.2rem;margin-bottom:8px}
+  .step p{color:#aab4c8;font-size:.95rem}
+
+  /* Reviews */
+  .reviews{background:var(--bg)}
+  .rev-head{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:30px}
+  .rev-head .g{font-family:'Manrope';font-weight:800;font-size:1.5rem}
+  .rev-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .rev-track::-webkit-scrollbar{height:8px}
+  .rev-track::-webkit-scrollbar-thumb{background:#cfd8e6;border-radius:999px}
+  .review{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px}
+  .review .quote{color:#39435a;font-size:.96rem}
+  .review .who{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+  .review .who b{font-size:.92rem}
+  .review .who span{font-size:.8rem;color:var(--muted)}
+  .rev-stats{display:flex;gap:40px;justify-content:center;margin-top:34px;flex-wrap:wrap;text-align:center}
+  .rev-stats .num{font-family:'Manrope';font-weight:800;font-size:2.4rem;color:var(--blue)}
+  .rev-stats p{color:var(--muted);font-size:.9rem}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:46px;align-items:start}
+  .contact-info h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px}
+  .contact-info>p{color:var(--muted);margin-bottom:24px}
+  .info-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+  .info-row .ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:#eef3ff;color:var(--blue);display:grid;place-items:center}
+  .info-row .l{font-size:.8rem;color:var(--muted)}
+  .info-row .v{font-weight:700}
+  .contact-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+
+  /* Zones / map */
+  .zones{text-align:center}
+  .zones img{margin:30px auto 0;max-width:760px;width:100%}
+
+  /* FAQ */
+  .faq-list{max-width:820px;margin:0 auto}
+  details{border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px;overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;font-family:'Manrope';display:flex;justify-content:space-between;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#eef3ff;color:var(--blue);display:grid;place-items:center;font-weight:800;transition:.2s}
+  details[open] summary .plus{transform:rotate(45deg)}
+  details .ans{padding:0 22px 20px;color:var(--muted)}
+
+  /* Final CTA */
+  .final{background:linear-gradient(135deg,var(--blue),#3a7bff);color:#fff;border-radius:24px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+  .final h2{font-size:clamp(1.7rem,3vw,2.3rem);color:#fff;margin-bottom:18px}
+  .final ul{list-style:none;display:grid;gap:10px}
+  .final li{display:flex;gap:10px;align-items:center;font-weight:600}
+  .final li .c{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:.75rem}
+  .final .box{display:grid;gap:12px}
+  .final .btn-call{background:#fff;color:var(--ink)}
+  .final .btn-call:hover{background:#f0f0f0}
+  .final .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+  .final .btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+
+  /* Footer */
+  footer{background:var(--ink);color:#9aa6bd;padding:40px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:#cbd5e6}
+  footer .links{display:flex;gap:20px}
+
+  /* Floating WhatsApp */
+  .wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.45)}
+  .wa svg{width:30px;height:30px;fill:#fff}
+
+  /* Mobile sticky action bar */
+  .mobile-bar{display:none}
+  @media(max-width:920px){
+    .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);padding:10px 12px;box-shadow:0 -8px 24px rgba(16,28,60,.1)}
+    .mobile-bar .btn{padding:14px}
+    .wa{bottom:84px}
+    body{padding-bottom:74px}
+  }
+
+  /* Responsive */
+  @media(max-width:980px){
+    .hero-grid,.about,.contact-grid,.final{grid-template-columns:1fr}
+    .reassure{grid-template-columns:1fr 1fr}
+    .cards,.steps{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr 1fr}
+    .final{padding:32px}
+  }
+  @media(max-width:620px){
+    .reassure,.cards,.steps,.why,.grid-2,.about-imgs{grid-template-columns:1fr}
+    .about-imgs img:nth-child(n){margin-top:0}
+  }
+
+  /* Mobile menu drawer */
+  .drawer{position:fixed;inset:0;background:rgba(12,18,32,.5);z-index:80;display:none}
+  .drawer.open{display:block}
+  .drawer-panel{position:absolute;top:0;right:0;width:80%;max-width:320px;height:100%;background:#fff;padding:24px;display:flex;flex-direction:column;gap:18px}
+  .drawer-panel a{font-weight:700;font-size:1.1rem;padding:8px 0;border-bottom:1px solid var(--line)}
+  .drawer-panel .close{align-self:flex-end;background:none;border:none;font-size:1.6rem;cursor:pointer}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="ico">●</span> Plombier d'urgence 24h/24 &amp; 7j/7 en Suisse Romande</span>
+    <a href="tel:+41225182492">📞 +41 22 518 24 92 <span class="hide-sm">· Prix d'un appel</span></a>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#hero" class="brand">SOS <span class="dot">Plomberie</span></a>
+    <nav class="nav-links">
+      <a href="#apropos">À propos</a>
+      <a href="#depannage">Dépannage</a>
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+41225182492" class="btn btn-call">Appeler</a>
+      <a href="#contact" class="btn btn-quote">Devis gratuit</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-panel">
+    <button class="close" id="closeDrawer" aria-label="Fermer">×</button>
+    <a href="#apropos">À propos</a>
+    <a href="#depannage">Dépannage</a>
+    <a href="#avis">Avis clients</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+41225182492" class="btn btn-call btn-block">📞 Appeler maintenant</a>
+    <a href="#contact" class="btn btn-quote btn-block">Devis gratuit</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill">• Artisan plombier · Urgence 24/7</span>
+        <h1 style="margin-top:16px">Dépannage &amp; installation <span>sanitaire</span> en Suisse Romande</h1>
+        <p class="lead">Fuite d'eau, canalisation bouchée ou panne de chauffe-eau ? Nos experts interviennent en moins de 30 minutes pour vous dépanner efficacement.</p>
+        <div class="checks">
+          <div class="check"><span class="ic">✓</span><div><strong>Intervention express</strong> — disponible 24h/24 et 7j/7</div></div>
+          <div class="check"><span class="ic">✓</span><div><strong>Transparence des tarifs</strong> — devis gratuit avant intervention</div></div>
+          <div class="check"><span class="ic">✓</span><div><strong>Agréé par les assurances</strong> — interventions reconnues</div></div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+          <a href="tel:+41225182492" class="btn btn-call">📞 +41 22 518 24 92</a>
+          <a href="#depannage" class="btn btn-ghost">Voir nos services</a>
+        </div>
+        <div class="hero-rating">
+          <span class="stars">★★★★★</span>
+          <span><b>4.9/5</b> · Avis Google « Excellent »</span>
+        </div>
+      </div>
+
+      <!-- LEAD FORM (tunnel court) -->
+      <div class="lead-card" id="formTop">
+        <span class="badge">⚡ Réponse rapide</span>
+        <h2>Réservez votre intervention</h2>
+        <p class="sub">Laissez vos coordonnées, on vous rappelle en quelques minutes.</p>
+        <form class="lead-form" novalidate>
+          <div class="field">
+            <label for="t-nom">Nom complet *</label>
+            <input id="t-nom" name="nom" type="text" required placeholder="Votre nom">
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="t-tel">Téléphone *</label>
+              <input id="t-tel" name="telephone" type="tel" required placeholder="07X XXX XX XX">
+            </div>
+            <div class="field">
+              <label for="t-probleme">Votre besoin *</label>
+              <select id="t-probleme" name="probleme" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>Recherche / réparation de fuite</option>
+                <option>Débouchage de canalisations</option>
+                <option>Désembouage et détartrage</option>
+                <option>Installation de sanitaires</option>
+                <option>Installation de cumulus</option>
+                <option>Traitement de l'eau</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-quote btn-block">Être rappelé gratuitement →</button>
+          <p class="form-foot">🔒 Sans engagement · Devis gratuit · Réponse 24/7</p>
+        </form>
+        <div class="form-done">
+          <div class="ic">✓</div>
+          <h2>Merci !</h2>
+          <p class="sub">Votre demande a bien été envoyée. Nous vous rappelons très vite.</p>
+          <a href="tel:+41225182492" class="btn btn-call btn-block" style="margin-top:10px">Ou appelez-nous maintenant</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reassurance -->
+    <div class="reassure">
+      <div class="item"><h3>Équipe de plombiers</h3><p>Petits effectifs, grande réactivité : vous parlez directement aux pros.</p></div>
+      <div class="item"><h3>Devis clair &amp; gratuit</h3><p>Par téléphone ou en ligne, zéro frais caché et des tarifs transparents.</p></div>
+      <div class="item"><h3>Intervention flexible</h3><p>Urgence ou sur rendez-vous, on s'adapte à vos besoins.</p></div>
+      <div class="item"><h3>Tarifs fixes</h3><p>Aucune surfacturation, même en cas d'urgence. Nos prix restent stables.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="block" id="apropos">
+  <div class="wrap about">
+    <div>
+      <span class="pill">À propos</span>
+      <h2 style="margin-top:14px">Une équipe d'experts au service de votre tranquillité</h2>
+      <p>Chez SOS Plomberie, nous savons que les urgences ne préviennent jamais. Basés à Genève, nous intervenons dans toute la Suisse Romande avec une équipe d'experts en plomberie, assainissement et traitement de l'eau.</p>
+      <p>Disponible 24h/24 et 7j/7, notre équipe réactive est agréée par les assurances pour la recherche de fuites. Particulier ou professionnel, comptez sur nous pour résoudre vos problèmes en un temps record.</p>
+      <div class="actions">
+        <a href="tel:+41225182492" class="btn btn-call">📞 +41 22 518 24 92</a>
+        <a href="#contact" class="btn btn-quote">Devis gratuit</a>
+      </div>
+    </div>
+    <div class="about-imgs">
+      <img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a22ec5b3a4e403c67e9d65_1.png" alt="Intervention plomberie">
+      <img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a22ecb072e0fa8cb37a3d5_Group%203.png" alt="Travaux de plomberie">
+      <img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a22ecc38266f98f77264c3_Group%205.png" alt="Réparation sanitaire">
+      <img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a22ecbd965e48cb2fe7a59_ad40a0306a6c42147ea69953f73486c2_Group%202.png" alt="Installation sanitaire">
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="block services" id="depannage">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Dépannage &amp; installation, en urgence ou sur rendez-vous</h2>
+      <p>Nos experts interviennent rapidement pour tous vos problèmes sanitaires et d'assainissement : canalisation bouchée, fuite d'eau, désembouage et détartrage… nous avons la solution.</p>
+    </div>
+    <div class="cards">
+      <!-- card -->
+      <article class="card">
+        <div class="thumb"><span class="tag">Disponible en urgence</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a4d8dc364dad7e810165e3_image.png" alt="Recherche de fuites"></div>
+        <div class="body">
+          <span class="sub">Agréé assurances</span>
+          <h3>Recherche de fuites</h3>
+          <p>Nous localisons précisément les fuites visibles et invisibles grâce à des technologies de pointe, et prenons en charge les démarches avec votre assurance.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="tag">Disponible en urgence</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a4d8dc40d65e7b1462f51c_card4.png" alt="Réparation de fuite"></div>
+        <div class="body">
+          <span class="sub">Urgence</span>
+          <h3>Réparation de fuite</h3>
+          <p>Nous détectons et réparons rapidement les fuites, visibles ou non, pour limiter les dégâts et restaurer votre installation dans les plus brefs délais.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="tag">Disponible en urgence</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a4d8dca93e07ee91abb3fc_card3.png" alt="Débouchage de canalisations"></div>
+        <div class="body">
+          <span class="sub">Assainissement</span>
+          <h3>Débouchage de canalisations</h3>
+          <p>Du simple engorgement à l'intervention lourde avec camion d'assainissement, nous débloquons toutes les situations.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="tag">Sur rendez-vous</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a48812cc454e4fdad80f34_Placeholder%20Image.png" alt="Désembouage et détartrage"></div>
+        <div class="body">
+          <span class="sub">Entretien</span>
+          <h3>Désembouage &amp; détartrage</h3>
+          <p>Améliorez la performance et la durée de vie de votre installation en éliminant les dépôts et résidus.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="tag">Sur rendez-vous</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a4d8dcc8b384be542b733c_card6.png" alt="Installation de sanitaires"></div>
+        <div class="body">
+          <span class="sub">Installation</span>
+          <h3>Installation de sanitaires</h3>
+          <p>Nous installons vos équipements, du plus simple au plus complexe, en garantissant un confort optimal pour votre quotidien.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="tag">Sur rendez-vous</span><img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a4d8dcb131d902c05e8327_card7.png" alt="Installation de cumulus"></div>
+        <div class="body">
+          <span class="sub">Chauffe-eau</span>
+          <h3>Installation de cumulus</h3>
+          <p>Du choix du modèle adapté à l'installation complète, nous vous accompagnons pour un système de chauffage d'eau fiable et performant.</p>
+          <div class="cta"><a href="tel:+41225182492" class="btn btn-call">Appeler</a><a href="#contact" class="btn btn-ghost">Contact</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pourquoi nous choisir pour vos urgences plomberie ?</h2>
+      <p>Interventions rapides, expertise technique et accompagnement sur mesure : un dépannage efficace, conforme et sans mauvaise surprise.</p>
+    </div>
+    <div class="why">
+      <div class="item"><div class="num">10+</div><h3>Expérience</h3><p>Plombiers expérimentés depuis plus de 10 ans.</p></div>
+      <div class="item"><div class="num">✓</div><h3>Compétences</h3><p>Plombiers certifiés pour toutes vos urgences.</p></div>
+      <div class="item"><div class="num">24/7</div><h3>Réactivité</h3><p>Disponibles jour et nuit, week-ends inclus.</p></div>
+      <div class="item"><div class="num">★</div><h3>Flexibilité</h3><p>Une équipe à l'écoute de vos besoins.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="block process">
+  <div class="wrap">
+    <div class="section-head"><h2>Notre processus simplifié en 3 étapes</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Contactez-nous</h3><p>Par téléphone ou via le formulaire. Choisissez date et heure en toute simplicité, nos experts vous guident.</p></div>
+      <div class="step"><div class="n">2</div><h3>Intervention du plombier</h3><p>Nos plombiers qualifiés interviennent chez vous pour un dépannage rapide, soigné et conforme aux normes.</p></div>
+      <div class="step"><div class="n">3</div><h3>Paiement &amp; tranquillité</h3><p>Vous réglez et recevez votre facture immédiatement. Pas de frais cachés, pas de mauvaise surprise.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="block reviews" id="avis">
+  <div class="wrap">
+    <div class="rev-head">
+      <span class="g"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+      <div><div style="font-weight:800">Avis clients · <span style="color:#ffb400">4.9/5</span></div><span class="stars">★★★★★</span></div>
+    </div>
+    <div class="rev-track">
+      <div class="review"><span class="stars">★★★★★</span><p class="quote">« Gros souci de canalisation bouchée, c'était vraiment gênant. En quelques heures tout était réglé, matériel adapté et travail pro. »</p><div class="who"><div><b>— Sophie R.</b><br><span>Intervention à Lausanne</span></div></div></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="quote">« J'avais du calcaire partout. On m'a recommandé un adoucisseur d'eau, installation rapide et l'eau est bien plus agréable depuis. »</p><div class="who"><div><b>— Julien D.</b><br><span>Intervention à Neuchâtel</span></div></div></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="quote">« Ma chaudière faisait des bruits bizarres. Après diagnostic, désembouage du système et tout refonctionne. Équipe très pro. »</p><div class="who"><div><b>— Martine G.</b><br><span>Intervention à Lausanne</span></div></div></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="quote">« Fuite détectée et réparée le jour même. Devis clair avant l'intervention, aucune mauvaise surprise sur la facture. »</p><div class="who"><div><b>— Karim B.</b><br><span>Intervention à Genève</span></div></div></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="quote">« Réactifs même un dimanche soir. Plombier ponctuel, sympa et efficace. Je recommande à 100%. »</p><div class="who"><div><b>— Laura M.</b><br><span>Intervention à Carouge</span></div></div></div>
+    </div>
+    <div class="rev-stats">
+      <div><div class="num">4.9</div><p>Note moyenne sur 5</p></div>
+      <div><div class="num">+98%</div><p>De clients satisfaits en 2024</p></div>
+      <div><div class="num">30 min</div><p>Délai moyen d'intervention</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="block" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="pill">Contact</span>
+      <h2 style="margin-top:14px">Réservez votre intervention</h2>
+      <p>Prenez rendez-vous ou contactez-nous pour toute demande d'information.</p>
+      <div class="info-row"><div class="ic">✉️</div><div><div class="l">Email</div><div class="v">contact@sosplomberie.ch</div></div></div>
+      <div class="info-row"><div class="ic">📞</div><div><div class="l">Téléphone</div><div class="v"><a href="tel:+41225182492">+41 22 518 24 92</a></div></div></div>
+      <div class="info-row"><div class="ic">📍</div><div><div class="l">Siège social</div><div class="v">Rue Liotard 5, 1202 Genève</div></div></div>
+      <div class="info-row"><div class="ic">🕒</div><div><div class="l">Horaires</div><div class="v">Lundi au dimanche : 24/7</div></div></div>
+    </div>
+
+    <div class="contact-form">
+      <h2 style="font-size:1.3rem;margin-bottom:4px">Demande de devis gratuit</h2>
+      <p class="sub" style="color:var(--muted);font-size:.92rem;margin-bottom:18px">Réponse rapide, sans engagement.</p>
+      <form class="lead-form" novalidate>
+        <div class="grid-2">
+          <div class="field"><label for="c-nom">Nom *</label><input id="c-nom" name="nom" type="text" required placeholder="Votre nom"></div>
+          <div class="field"><label for="c-tel">Téléphone *</label><input id="c-tel" name="telephone" type="tel" required placeholder="07X XXX XX XX"></div>
+        </div>
+        <div class="field"><label for="c-email">Adresse e-mail *</label><input id="c-email" name="email" type="email" required placeholder="vous@email.ch"></div>
+        <div class="field">
+          <label for="c-probleme">Quel est le problème ? *</label>
+          <select id="c-probleme" name="probleme" required>
+            <option value="" selected disabled>Choisir…</option>
+            <option>Recherche / réparation de fuite</option>
+            <option>Débouchage de canalisations</option>
+            <option>Désembouage et détartrage</option>
+            <option>Installation de sanitaires</option>
+            <option>Installation de cumulus</option>
+            <option>Traitement de l'eau</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-adresse">Adresse de l'intervention *</label><input id="c-adresse" name="adresse" type="text" required placeholder="Rue, NPA, ville"></div>
+        <button type="submit" class="btn btn-quote btn-block">Réserver mon intervention →</button>
+        <p class="form-foot">🔒 Vos données restent confidentielles.</p>
+      </form>
+      <div class="form-done">
+        <div class="ic">✓</div>
+        <h2>Merci !</h2>
+        <p class="sub" style="color:var(--muted)">Votre demande a bien été envoyée. Nous revenons vers vous rapidement.</p>
+        <a href="tel:+41225182492" class="btn btn-call btn-block" style="margin-top:10px">Appeler maintenant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ZONES ===== -->
+<section class="block zones" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Toujours proche de vous</h2>
+      <p>Un problème de plomberie n'attend pas. Notre équipe est présente sur toute la Suisse Romande et s'engage à intervenir rapidement, où que vous soyez.</p>
+    </div>
+    <img loading="lazy" src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a30acfebc8cd2d4ba56fbc_Group%203.svg" alt="Carte des zones d'intervention en Suisse Romande">
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Les questions les plus fréquentes</h2>
+      <p>Vous avez des questions ? Voici les réponses les plus courantes. Pour le reste, contactez-nous !</p>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Comment prendre rendez-vous pour un dépannage ?<span class="plus">+</span></summary><div class="ans">Appelez-nous au +41 22 518 24 92 ou remplissez le formulaire de contact. Nous nous engageons à intervenir rapidement.</div></details>
+      <details><summary>Intervenez-vous la nuit ou le week-end ?<span class="plus">+</span></summary><div class="ans">Oui, 24h/24 et 7j/7, y compris nuits, week-ends et jours fériés. Les urgences ne préviennent pas, nous sommes toujours prêts.</div></details>
+      <details><summary>Quel délai pour une intervention d'urgence ?<span class="plus">+</span></summary><div class="ans">Généralement dans les 30 minutes suivant votre appel, selon la situation. Notre équipe est disponible 24/7.</div></details>
+      <details><summary>Travaillez-vous avec les assurances pour les fuites ?<span class="plus">+</span></summary><div class="ans">Oui, nous sommes agréés par les assurances pour la recherche de fuites et pouvons prendre en charge les démarches administratives.</div></details>
+      <details><summary>Proposez-vous des services aux entreprises ?<span class="plus">+</span></summary><div class="ans">Oui : conciergeries, agences immobilières, etc. Des interventions rapides et sur mesure pour chaque type d'entreprise.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="block">
+  <div class="wrap">
+    <div class="final">
+      <div>
+        <h2>Besoin d'un plombier en urgence ?</h2>
+        <ul>
+          <li><span class="c">✓</span> Disponible 24h/24 et 7j/7</li>
+          <li><span class="c">✓</span> Devis gratuit avant intervention</li>
+          <li><span class="c">✓</span> Agréé par les assurances</li>
+          <li><span class="c">✓</span> Intervention rapide dans toute la Suisse Romande</li>
+        </ul>
+      </div>
+      <div class="box">
+        <a href="tel:+41225182492" class="btn btn-call btn-block">📞 +41 22 518 24 92</a>
+        <a href="#contact" class="btn btn-ghost btn-block">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div>© 2025 SOS Plomberie — Tous droits réservés.</div>
+    <div class="links">
+      <a href="#">Conditions générales</a>
+      <a href="#">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa" href="https://wa.me/41225182492" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.748-.989zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- Mobile sticky action bar -->
+<div class="mobile-bar">
+  <a href="tel:+41225182492" class="btn btn-call">📞 Appeler</a>
+  <a href="#contact" class="btn btn-quote">Devis gratuit</a>
+</div>
+
+<script>
+  // Mobile menu
+  const drawer = document.getElementById('drawer');
+  document.getElementById('menuBtn').addEventListener('click', ()=>drawer.classList.add('open'));
+  document.getElementById('closeDrawer').addEventListener('click', ()=>drawer.classList.remove('open'));
+  drawer.addEventListener('click', e=>{ if(e.target===drawer || e.target.tagName==='A') drawer.classList.remove('open'); });
+
+  // Forms : validation simple + état "merci"
+  document.querySelectorAll('.lead-form').forEach(form=>{
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      // TODO : brancher l'envoi réel ici (Formspree, e-mail, CRM…)
+      // fetch('VOTRE_ENDPOINT', {method:'POST', body:new FormData(form)})
+      const card = form.parentElement;
+      form.style.display = 'none';
+      const done = card.querySelector('.form-done');
+      if(done) done.style.display = 'block';
+    });
+  });
+</script>
+</body>
