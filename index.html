@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,7 +14,7 @@
 <meta name="geo.placename" content="Genève">
 <meta name="geo.position" content="46.2044;6.1432">
 <meta name="ICBM" content="46.2044, 6.1432">
-<!-- Open Graph -->
+<!-- Open Graph — aperçu quand on partage sur Facebook, LinkedIn, WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:site_name" content="SOS Plomberie">
@@ -23,12 +22,32 @@
 <meta property="og:description" content="Plombier d'urgence à Genève et dans le canton (rayon de 25 km). Intervention rapide 24/7. Devis gratuit.">
 <meta property="og:url" content="https://www.sosplomberie.ch/">
 <meta property="og:image" content="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5ae09fbf116549b6db9aa_256.png">
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">
+<meta property="og:image:alt" content="Logo SOS Plomberie – Plombier d'urgence Genève">
+<meta property="og:image:type" content="image/png">
+<!-- Twitter / X Card — aperçu quand on partage sur X (Twitter) -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plombier d'Urgence Genève 24/7 – SOS Plomberie">
+<meta name="twitter:description" content="Fuite, canalisation bouchée ? Intervention en 30 min à Genève et tout le canton. Agréé assurances. Devis gratuit.">
+<meta name="twitter:image" content="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5ae09fbf116549b6db9aa_256.png">
+<meta name="twitter:image:alt" content="SOS Plomberie Genève – Urgence 24/7">
 <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png" type="image/x-icon">
+<!-- Icône iOS (ajout au bureau d'accueil iPhone/iPad) -->
+<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png">
+<!-- Couleur de la barre de navigation du navigateur mobile -->
+<meta name="theme-color" content="#0057ff">
+<!-- Comportement PWA sur iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SOS Plomberie">
+<!-- DNS préchargé : accélère le chargement des images et des polices -->
+<link rel="dns-prefetch" href="https://cdn.prod.website-files.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <style>
   :root{
     --blue:#0057ff;
@@ -264,19 +283,40 @@
   .drawer-panel .close{align-self:flex-end;background:none;border:none;font-size:1.6rem;cursor:pointer}
 </style>
 
-<!-- ===== DONNÉES STRUCTURÉES — SEO LOCAL (Genève + rayon 25 km, Suisse) ===== -->
+<!-- ===== DONNÉES STRUCTURÉES JSON-LD — SEO LOCAL (Genève + rayon 25 km, Suisse) ===== -->
+
+<!-- 1. WebSite : indique à Google le nom et l'URL du site -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Plumber",
+  "@type": "WebSite",
+  "@id": "https://www.sosplomberie.ch/#website",
+  "url": "https://www.sosplomberie.ch/",
+  "name": "SOS Plomberie",
+  "description": "Plombier d'urgence à Genève 24h/24 – Intervention rapide dans tout le canton de Genève",
+  "inLanguage": "fr-CH",
+  "publisher": {"@id": "https://www.sosplomberie.ch/#business"}
+}
+</script>
+
+<!-- 2. Plumber / LocalBusiness : fiche établissement pour Google Maps & recherche locale -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Plumber", "LocalBusiness"],
   "@id": "https://www.sosplomberie.ch/#business",
   "name": "SOS Plomberie",
+  "legalName": "SOS Plomberie Sàrl",
   "image": "https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5ae09fbf116549b6db9aa_256.png",
+  "logo": "https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png",
   "url": "https://www.sosplomberie.ch/",
   "telephone": "+41225182492",
   "email": "contact@sosplomberie.ch",
   "priceRange": "$$",
   "currenciesAccepted": "CHF",
+  "paymentAccepted": "Cash, Carte bancaire, Virement",
+  "foundingDate": "2015",
+  "description": "Plombier d'urgence à Genève disponible 24h/24 et 7j/7. Intervention rapide (30 min) pour fuites, débouchage, chauffe-eau. Agréé assurances. Devis gratuit.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rue Liotard 5",
@@ -290,16 +330,21 @@
     "latitude": 46.2044,
     "longitude": 6.1432
   },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 46.2044,
-      "longitude": 6.1432
-    },
-    "geoRadius": "25000",
-    "description": "Genève et communes suisses du canton de Genève dans un rayon de 25 km"
-  },
+  "hasMap": "https://maps.google.com/?q=Rue+Liotard+5,+1202+Gen%C3%A8ve",
+  "areaServed": [
+    {"@type": "City", "name": "Genève", "sameAs": "https://www.wikidata.org/wiki/Q71"},
+    {"@type": "City", "name": "Carouge"},
+    {"@type": "City", "name": "Lancy"},
+    {"@type": "City", "name": "Vernier"},
+    {"@type": "City", "name": "Meyrin"},
+    {"@type": "City", "name": "Onex"},
+    {"@type": "City", "name": "Thônex"},
+    {"@type": "City", "name": "Plan-les-Ouates"},
+    {"@type": "City", "name": "Le Grand-Saconnex"},
+    {"@type": "City", "name": "Chêne-Bougeries"},
+    {"@type": "City", "name": "Versoix"},
+    {"@type": "City", "name": "Bernex"}
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -310,19 +355,55 @@
     "@type": "AggregateRating",
     "ratingValue": "4.9",
     "reviewCount": "127",
-    "bestRating": "5"
+    "bestRating": "5",
+    "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Sophie R."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Gros souci de canalisation bouchée, c'était vraiment gênant. En quelques heures tout était réglé, matériel adapté et travail pro."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Karim B."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Fuite détectée et réparée le jour même. Devis clair avant l'intervention, aucune mauvaise surprise sur la facture."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Laura M."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Réactifs même un dimanche soir. Plombier ponctuel, sympa et efficace. Je recommande à 100%."
+    }
+  ],
   "makesOffer": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recherche de fuites à Genève"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Réparation de fuite d'eau"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Débouchage de canalisations"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Désembouage et détartrage"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de sanitaires"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de cumulus / chauffe-eau"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traitement de l'eau"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recherche de fuites à Genève", "description": "Localisation précise de fuites visibles et invisibles, agréé assurances"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Réparation de fuite d'eau", "description": "Intervention d'urgence pour réparer toutes fuites"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Débouchage de canalisations", "description": "Débouchage rapide canalisations bouchées, camion d'assainissement disponible"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Désembouage et détartrage", "description": "Entretien et nettoyage des installations"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de sanitaires", "description": "Pose et remplacement de tous équipements sanitaires"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de cumulus / chauffe-eau", "description": "Installation et remplacement de chauffe-eau et ballons"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traitement de l'eau", "description": "Adoucisseurs, filtres, traitement calcaire"}}
   ]
 }
 </script>
+
+<!-- 3. BreadcrumbList : fil d'Ariane affiché dans les résultats Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.sosplomberie.ch/"},
+    {"@type": "ListItem", "position": 2, "name": "Plombier urgence Genève", "item": "https://www.sosplomberie.ch/#depannage"},
+    {"@type": "ListItem", "position": 3, "name": "Zones d'intervention", "item": "https://www.sosplomberie.ch/#zones"}
+  ]
+}
+</script>
+
+<!-- 4. FAQPage : affiche les questions/réponses directement dans les résultats Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -332,7 +413,9 @@
     {"@type": "Question", "name": "Intervenez-vous la nuit ou le week-end à Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, 24h/24 et 7j/7, y compris nuits, week-ends et jours fériés sur l'ensemble du canton de Genève."}},
     {"@type": "Question", "name": "Quel est le délai d'intervention d'urgence à Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Généralement dans les 30 minutes suivant votre appel à Genève et alentours, selon la situation. Notre équipe est disponible 24/7."}},
     {"@type": "Question", "name": "Travaillez-vous avec les assurances pour les fuites ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes agréés par les assurances pour la recherche de fuites et pouvons prendre en charge les démarches administratives."}},
-    {"@type": "Question", "name": "Quelles zones couvrez-vous autour de Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous intervenons à Genève et dans toutes les communes suisses du canton situées dans un rayon de 25 km : Carouge, Lancy, Vernier, Meyrin, Onex, Thônex, Versoix, Plan-les-Ouates, Le Grand-Saconnex, Chêne-Bougeries, Veyrier, Bernex et alentours."}}
+    {"@type": "Question", "name": "Quelles zones couvrez-vous autour de Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous intervenons à Genève et dans toutes les communes suisses du canton situées dans un rayon de 25 km : Carouge, Lancy, Vernier, Meyrin, Onex, Thônex, Versoix, Plan-les-Ouates, Le Grand-Saconnex, Chêne-Bougeries, Veyrier, Bernex et alentours."}},
+    {"@type": "Question", "name": "Quel est le prix d'une intervention de plomberie en urgence à Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Le devis est gratuit et vous est communiqué avant toute intervention. Nos tarifs sont fixes, sans surfacturation même pour les urgences de nuit ou le week-end."}},
+    {"@type": "Question", "name": "Proposez-vous des services aux entreprises et aux régies immobilières ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous intervenons pour les conciergeries, agences immobilières, syndics et entreprises. Contrats d'entretien et interventions ponctuelles disponibles."}}
   ]
 }
 </script>
@@ -350,7 +433,7 @@
 <!-- ===== HEADER ===== -->
 <header>
   <div class="wrap nav">
-    <a href="#hero" class="brand"><img src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png" alt="SOS Plomberie" style="height:42px;width:auto;display:block">SOS <span class="dot">Plomberie</span></a>
+    <a href="#hero" class="brand"><img src="https://cdn.prod.website-files.com/68a2067e2d7833cda8a76066/68a5adc12cad98e12077036f_logo.png" alt="SOS Plomberie – Plombier urgence Genève" style="height:42px;width:auto;display:block" fetchpriority="high" width="42" height="42">SOS <span class="dot">Plomberie</span></a>
     <nav class="nav-links">
       <a href="#apropos">À propos</a>
       <a href="#depannage">Dépannage</a>
@@ -384,6 +467,7 @@
   </div>
 </div>
 
+<main>
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="wrap">
@@ -733,12 +817,15 @@
   </div>
 </section>
 
+</main>
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
     <div>
-      <strong style="color:#fff">SOS Plomberie</strong> — Plombier d'urgence à Genève<br>
-      Rue Liotard 5, 1202 Genève · <a href="tel:+41225182492">+41 22 518 24 92</a> · contact@sosplomberie.ch<br>
+      <address style="font-style:normal">
+        <strong style="color:#fff">SOS Plomberie</strong> — Plombier d'urgence à Genève<br>
+        Rue Liotard 5, 1202 Genève · <a href="tel:+41225182492">+41 22 518 24 92</a> · <a href="mailto:contact@sosplomberie.ch">contact@sosplomberie.ch</a>
+      </address>
       <span style="font-size:.82rem">Zones : Genève et communes suisses dans un rayon de 25 km · 24h/24 · 7j/7</span><br>
       <span style="font-size:.82rem">© 2025 SOS Plomberie — Tous droits réservés.</span>
     </div>
