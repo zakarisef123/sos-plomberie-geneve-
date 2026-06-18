@@ -4,6 +4,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ===== GOOGLE CONSENT MODE v2 — doit être chargé EN PREMIER, avant tout gtag ===== -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Valeurs par défaut : tout refusé (conformité RGPD / LPD Suisse)
+  gtag('consent', 'default', {
+    ad_storage:          'denied',
+    ad_user_data:        'denied',
+    ad_personalization:  'denied',
+    analytics_storage:   'denied',
+    functionality_storage: 'granted',
+    personalization_storage: 'denied',
+    security_storage:    'granted',
+    wait_for_update: 500
+  });
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+
+  // Restaure le choix précédent sans attendre le banner
+  (function(){
+    var c = localStorage.getItem('cmp_consent');
+    if(c === 'granted'){
+      gtag('consent', 'update', {
+        ad_storage:         'granted',
+        ad_user_data:       'granted',
+        ad_personalization: 'granted',
+        analytics_storage:  'granted'
+      });
+    }
+  })();
+</script>
+<!-- TODO : remplacez G-XXXXXXXXXX par votre vrai ID Google Analytics 4 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
 <title>Plombier d'Urgence Genève 24/7 – Dépannage Rapide à Genève & Région (25 km) | SOS Plomberie</title>
 <meta name="description" content="Plombier d'urgence à Genève disponible 24h/24 et 7j/7. Intervention rapide (30 min) pour fuites, chauffe-eau, débouchage et canalisations bouchées à Genève, Carouge, Lancy, Meyrin, Vernier, Versoix et dans le canton (rayon 25 km). Devis gratuit.">
 <meta name="keywords" content="plombier Genève, plombier urgence Genève, dépannage plomberie Genève, débouchage canalisation Genève, recherche de fuite Genève, plombier Carouge, plombier Lancy, plombier Meyrin, plombier Vernier, plombier Onex">
@@ -274,6 +309,22 @@
   @media(max-width:620px){
     .reassure,.cards,.steps,.why,.grid-2,.about-imgs{grid-template-columns:1fr}
     .about-imgs img:nth-child(n){margin-top:0}
+  }
+
+  /* Cookie Consent Banner */
+  #cmp-banner{position:fixed;left:0;right:0;bottom:0;z-index:200;background:#0c1220;color:#d0d8e8;font-size:.88rem;padding:18px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,.4);transition:transform .3s}
+  #cmp-banner.hidden{transform:translateY(110%)}
+  #cmp-banner p{flex:1;margin:0;line-height:1.5}
+  #cmp-banner a{color:#9fd0ff;text-decoration:underline}
+  #cmp-banner .cmp-btns{display:flex;gap:10px;flex-shrink:0}
+  #cmp-accept{background:var(--blue);color:#fff;border:none;border-radius:10px;padding:11px 22px;font-weight:700;cursor:pointer;font-size:.9rem}
+  #cmp-accept:hover{background:var(--blue-dark)}
+  #cmp-reject{background:transparent;color:#9aa6bd;border:1px solid #3a4560;border-radius:10px;padding:11px 18px;font-weight:600;cursor:pointer;font-size:.9rem}
+  #cmp-reject:hover{border-color:#9aa6bd;color:#d0d8e8}
+  @media(max-width:640px){
+    #cmp-banner{flex-direction:column;align-items:flex-start;padding-bottom:84px}
+    #cmp-banner .cmp-btns{width:100%}
+    #cmp-accept,#cmp-reject{flex:1;text-align:center}
   }
 
   /* Mobile menu drawer */
@@ -868,6 +919,59 @@
       if(done) done.style.display = 'block';
     });
   });
+</script>
+
+<!-- ===== COOKIE CONSENT BANNER — Google Consent Mode v2 ===== -->
+<div id="cmp-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
+  <p>
+    🍪 Nous utilisons des cookies pour analyser le trafic et améliorer nos services (Google Analytics).
+    En cliquant sur <strong>Accepter</strong>, vous consentez à leur utilisation.
+    <a href="#" id="cmp-more">En savoir plus</a>
+  </p>
+  <div class="cmp-btns">
+    <button id="cmp-reject">Refuser</button>
+    <button id="cmp-accept">Accepter</button>
+  </div>
+</div>
+
+<script>
+  // Consent Mode v2 — gestion du banner
+  (function(){
+    var banner  = document.getElementById('cmp-banner');
+    var stored  = localStorage.getItem('cmp_consent');
+
+    // Masquer le banner si l'utilisateur a déjà choisi
+    if(stored) banner.classList.add('hidden');
+
+    function grantAll(){
+      gtag('consent', 'update', {
+        ad_storage:         'granted',
+        ad_user_data:       'granted',
+        ad_personalization: 'granted',
+        analytics_storage:  'granted'
+      });
+      localStorage.setItem('cmp_consent', 'granted');
+      banner.classList.add('hidden');
+    }
+
+    function denyAll(){
+      gtag('consent', 'update', {
+        ad_storage:         'denied',
+        ad_user_data:       'denied',
+        ad_personalization: 'denied',
+        analytics_storage:  'denied'
+      });
+      localStorage.setItem('cmp_consent', 'denied');
+      banner.classList.add('hidden');
+    }
+
+    document.getElementById('cmp-accept').addEventListener('click', grantAll);
+    document.getElementById('cmp-reject').addEventListener('click', denyAll);
+    document.getElementById('cmp-more').addEventListener('click', function(e){
+      e.preventDefault();
+      alert('Politique de confidentialité\n\nNous utilisons Google Analytics pour mesurer l\'audience de notre site. Ces cookies sont uniquement activés avec votre consentement. Vos données sont anonymisées et ne sont pas revendues.\n\nPour retirer votre consentement, effacez les données de navigation de ce site.');
+    });
+  })();
 </script>
 </body>
 </html>
